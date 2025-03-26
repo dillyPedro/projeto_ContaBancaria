@@ -81,13 +81,14 @@ public class ContaBancaria {
 
     public void fecharConta(){
         if(this.getSaldo() == 0){
-            this.getStatus() == false;
-            this.getNumero() == null;
-            this.getAgencia() == null;
-            this.getTitular() == null;
+            this.status = false;
+            this.numero = 0;
+            this.agencia = 0;
+            this.saldo = 0;
+            this.titular = null;
             System.out.println("A conta foi encerrada com sucesso");
         } else{
-            System.out.println("Não foi possível encerrar a conta" + this.getTitular());
+            System.out.println("Não foi possível encerrar a conta" + this.titular);
         }
     }
 }
