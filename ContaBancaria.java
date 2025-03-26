@@ -1,12 +1,14 @@
 package Ex_Conta_Bancaria;
 
 public class ContaBancaria {
+    // Atributos:
     private double numero;
     private double agencia;
     private double saldo;
     private Cliente titular;
     private boolean status;
 
+    // Construtor:
     public ContaBancaria(double numero, double agencia, double saldo) {
         this.numero = numero;
         this.agencia = agencia;
@@ -14,6 +16,7 @@ public class ContaBancaria {
         this.status = false;
     }
 
+    // Métodos Getters e Setters:
     public double getNumero() {
         return numero;
     }
@@ -45,7 +48,8 @@ public class ContaBancaria {
     public void setStatus() {
         this.status = true;
     }
-    
+
+    // Métodos Especiais:
     public void depositar(double valor) {
         this.setStatus();
         if(valor > 0) {
@@ -72,6 +76,18 @@ public class ContaBancaria {
             destino.setSaldo(destino.getSaldo() + valor);
         } else {
             System.out.println("Valor insuficiente para transferir.");
+        }
+    }
+
+    public void fecharConta(){
+        if(this.getSaldo() == 0){
+            this.getStatus() == false;
+            this.getNumero() == null;
+            this.getAgencia() == null;
+            this.getTitular() == null;
+            System.out.println("A conta foi encerrada com sucesso");
+        } else{
+            System.out.println("Não foi possível encerrar a conta" + this.getTitular());
         }
     }
 }
