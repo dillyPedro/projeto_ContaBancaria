@@ -1,11 +1,13 @@
 package Ex_Conta_Bancaria;
 
 public class Cliente extends ContaBancaria{
+    // Atributos:
     private String titular;
     private String cpf;
     private int idade;
     private String sexo;
 
+    // Construtor:
     public Cliente(double numero, double agencia, double saldo, String titular, String cpf, int idade, String sexo) {
         super(numero, agencia, saldo);
         this.titular = titular;
@@ -14,6 +16,7 @@ public class Cliente extends ContaBancaria{
         this.sexo = sexo;
     }
 
+    // Métodos Getters e Setters:
     public String getTitular() {
         return titular;
     }
@@ -50,6 +53,7 @@ public class Cliente extends ContaBancaria{
         this.sexo = sexo;
     }
 
+    // Métodos Especiais:
     public void infosConta(){
         System.out.println("Titular: " + this.getTitular());
         System.out.println("Numero: " + this.getNumero());
