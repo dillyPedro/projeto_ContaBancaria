@@ -21,5 +21,14 @@ public class Main {
         System.out.println("\n");
         cliente2.infosConta(); // Retornando os valores da conta "cliente2" após a transferência;
 
+        System.out.println("\n");
+
+        cliente1.transferir(cliente2, 300.00); // 
+        cliente1.infosConta();
+
+        System.out.println("\n"); // Transferindo o valor de R$ 300.00 da conta do "cliente1" para a conta do "cliente2";
+        cliente1.fecharConta(); // Fechando a conta do "cliente1";
+        cliente1.infosConta(); // Retornando os valores da conta "cliente1" após o seu fechamento;
+
     }
 }
