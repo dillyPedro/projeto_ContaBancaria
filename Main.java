@@ -9,17 +9,17 @@ public class Main {
         cliente1.setStatus(); // Alterei o status da conta cliente1 para aberta;
         cliente2.setStatus(); // Alterei o status da conta cliente2 para aberta;
 
-        cliente1.depositar(500.00);
+        cliente1.depositar(500.00); // Efetuando um depósito de R$ 500.00 na conta do "cliente1";
         cliente1.infosConta(); // Retornando os valores da conta cliente1;
         System.out.println("\n");
-        cliente2.infosConta();
+        cliente2.infosConta(); // Retornando os valores da conta cliente2;
 
-        cliente1.transferir(cliente2, 700.00);
+        cliente1.transferir(cliente2, 700.00); // Transferindo o valor de R$ 700.00 da conta do "cliente1" para a conta do "cliente2";
         System.out.println("\n");
 
-        cliente1.infosConta();
+        cliente1.infosConta(); // Retornando os valores da conta "cliente1" após a transferência;
         System.out.println("\n");
-        cliente2.infosConta();
+        cliente2.infosConta(); // Retornando os valores da conta "cliente2" após a transferência;
 
     }
 }
